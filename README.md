@@ -1,2 +1,0 @@
-# KrivsoheevAA.github.io
-пробный
