@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta content-type="text/html" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Слайдер AVTO-MOTO, табы и рендеринг отзывов">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <title>Слайдер AVTO-MOTO</title>
+  <link rel="preload" type="font/woff2" href="fonts/OpenSans-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" type="font/woff2" href="fonts/OpenSans-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" type="font/woff2" href="fonts/OpenSans-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="site-body">
+  <header class="page-header">
+    <div class="container page-header__container">
+      <div class="page-header__logo">
+        <a>
+          <svg class="page-header__logo-img" width="55" height="55">
+            <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <div class="page-header__logo-name">
+          <p class="page-header__logo-text page-header__logo-text--first">AVTO</p>
+          <p class="page-header__logo-text page-header__logo-text--second">MOTO</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#">Автомобили</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Контакты</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Услуги</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Вакансии</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="card">
+      <div class="container card__container">
+        <div class="card__slider slider">
+          <div class="slider__wrapper">
+            <div class="slider__container">
+              <ul class="slider__slides">
+                <li class="slider__slide slider__slide--new">
+                  <picture>
+                    <!-- 1х: 600px; 2x: 1200px -->
+                    <source type="image/webp" srcset="img/desktop_slide_1.webp, img/desktop_slide_1@2x.webp 2x">
+                    <!-- 1х: 600px; 2x: 1200px -->
+                    <img src="img/desktop_slide_1.jpg" srcset="img/desktop_slide_1@2x.jpg 2x" alt="автомобиль" width="600" height="375">
+                  </picture>
+                </li>
+                <li class="slider__slide">
+                  <picture>
+                    <!-- 1х: 600px; 2x: 1200px -->
+                    <source type="image/webp" srcset="img/desktop_slide_2.webp, img/desktop_slide_2@2x.webp 2x">
+                    <!-- 1х: 600px; 2x: 1200px -->
+                    <img src="img/desktop_slide_2.jpg" srcset="img/desktop_slide_2@2x.jpg 2x" alt="вид внутри автомобиля" width="600" height="375">
+                  </picture>
+                </li>
+                <li class="slider__slide">
+                    <picture>
+                      <!-- 1х: 600px; 2x: 1200px -->
+                      <source type="image/webp" srcset="img/desktop_slide_3.webp, img/desktop_slide_3@2x.webp 2x">
+                      <!-- 1х: 600px; 2x: 1200px -->
+                      <img src="img/desktop_slide_3.jpg" srcset="img/desktop_slide_3@2x.jpg 2x" alt="спидометр" width="600" height="375">
+                    </picture>
+                </li>
+              </ul>
+            </div>
+            <div class="slider__controls">
+              <button class="slider__button slider__button--prev" type="button" aria-label="previous">
+                <span>
+                  <svg width="20" height="13">
+                    <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+                  </svg>
+                </span>
+              </button>
+              <ul class="slider__thumbs">
+                <li class="slider__thumb">
+                  <button type="button">
+                    <picture>
+                  <!-- 1х: 600px; 2x: 1200px -->
+                  <source type="image/webp" srcset="img/desktop_slide_1.webp, img/desktop_slide_1@2x.webp 2x">
+                  <!-- 1х: 600px; 2x: 1200px -->
+                  <img src="img/desktop_slide_1.jpg" srcset="img/desktop_slide_1@2x.jpg 2x" alt="автомобиль" width="600" height="375">
+                    </picture>
+                  </button>
+                </li>
+                <li class="slider__thumb">
+                  <button type="button">
+                    <picture>
+                      <!-- 1х: 600px; 2x: 1200px -->
+                      <source type="image/webp" srcset="img/desktop_slide_2.webp, img/desktop_slide_2@2x.webp 2x">
+                      <!-- 1х: 600px; 2x: 1200px -->
+                      <img src="img/desktop_slide_2.jpg" srcset="img/desktop_slide_2@2x.jpg 2x" alt="вид внутри автомобиля" width="600" height="375">
+                    </picture>
+                  </button>
+                </li>
+                <li class="slider__thumb">
+                  <button type="button">
+                      <picture>
+                        <!-- 1х: 600px; 2x: 1200px -->
+                        <source type="image/webp" srcset="img/desktop_slide_3.webp, img/desktop_slide_3@2x.webp 2x">
+                        <!-- 1х: 600px; 2x: 1200px -->
+                        <img src="img/desktop_slide_3.jpg" srcset="img/desktop_slide_3@2x.jpg 2x" alt="спидометр" width="600" height="375">
+                      </picture>
+                  </button>
+                </li>
+              </ul>
+              <button class="slider__button slider__button--next" type="button" aria-label="next">
+                <span>
+                  <svg width="20" height="13">
+                    <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card__specification">
+          <h1 class="card__specification-title">Марпех 11</h1>
+          <ul class="card__specification-list">
+            <li class="card__specification-item">
+              <svg class="card__specification-img" width="24" height="22">
+                <use xlink:href="img/sprite_auto.svg#icon-fuel"></use>
+              </svg>
+              <p>бензин</p>
+            </li>
+            <li class="card__specification-item">
+              <svg class="card__specification-img" width="26" height="24">
+                <use xlink:href="img/sprite_auto.svg#icon-mechanics"></use>
+              </svg>
+              <p>механика</p>
+            </li>
+            <li class="card__specification-item">
+              <svg class="card__specification-img" width="32" height="21">
+                <use xlink:href="img/sprite_auto.svg#icon-horse"></use>
+              </svg>
+              <p>100 л.с.</p>
+            </li>
+            <li class="card__specification-item card__specification-item--volume">
+              <svg class="card__specification-img" width="30" height="23">
+                <use xlink:href="img/sprite_auto.svg#icon-volume"></use>
+              </svg>
+              <p>1.4 л</p>
+            </li>
+          </ul>
+          <div class="card__prices">
+            <p class="card__price card__price--new">2 300 000 &#8381;</p>
+            <p class="card__price card__price--old">2 400 000 &#8381;</p>
+          </div>
+          <div class="card__actions">
+            <a href="#" class="card__button button button--primary">ОСТАВИТЬ ЗАЯВКУ</a>
+            <a href="#" class="card__button button button--outline">В КРЕДИТ ОТ 11 000 &#8381;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="discription">
+      <div class="container discription__container">
+        <div class="discription__tabs tabs">
+          <ul class="tabs__control-list">
+            <li><button type="button" class="tabs__control-item tabs__control-item--active" data-tab="0">Характеристики</button></li>
+            <li><button type="button" class="tabs__control-item" data-tab="1">Отзывы</button></li>
+            <li><button type="button" class="tabs__control-item" data-tab="2">Контакты</button></li>
+          </ul>
+          <ul class="tabs__content-list">
+            <li class="tabs__content-item tabs__content-item--show">
+              <table class="tabs__content-table tabs__table">
+                <tbody>
+                  <tr class="tabs__table-tr">
+                    <td class="tabs__table-td">Трансмиссия</td>
+                    <td class="tabs__table-td tabs__table-td--second">Роботизированная</td>
+                  </tr>
+                  <tr class="tabs__table-tr">
+                    <td class="tabs__table-td">Мощность двигателя, л.с.</td>
+                    <td class="tabs__table-td tabs__table-td--second">249</td>
+                  </tr>
+                  <tr class="tabs__table-tr">
+                    <td class="tabs__table-td">Тип двигателя</td>
+                    <td class="tabs__table-td tabs__table-td--second">Бензиновый</td>
+                  </tr>
+                  <tr class="tabs__table-tr">
+                    <td class="tabs__table-td">Привод</td>
+                    <td class="tabs__table-td tabs__table-td--second">Полный</td>
+                  </tr>
+                  <tr class="tabs__table-tr">
+                    <td class="tabs__table-td">Объем двигателя, л</td>
+                    <td class="tabs__table-td tabs__table-td--second">2.4</td>
+                  </tr>
+                  <tr class="tabs__table-tr">
+                    <td class="tabs__table-td">Макс. крутящий момент</td>
+                    <td class="tabs__table-td tabs__table-td--second">370/4500</td>
+                  </tr>
+                  <tr class="tabs__table-tr">
+                    <td class="tabs__table-td">Количество цилиндров</td>
+                    <td class="tabs__table-td tabs__table-td--second">4</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="tabs__content-item">
+              <div class="tabs__content-reviews reviews">
+                <div class="reviews__container">
+                  <div class="reviews__review">
+                    <h2 class="reviews__avtor">Борис Иванов</h2>
+                      <ul class="reviews__list">
+                        <li class="reviews__item"><span>+</span>Достоинства
+                          <p class="reviews__item reviews__item--dignity">мощность, внешний вид</p>
+                        </li>
+                        <li class="reviews__item"><span>-</span>Недостатки
+                          <p class="reviews__item reviews__item--disadvantage">Слабые тормозные колодки (пришлось заменить)</p>
+                        </li>
+                        <li class="reviews__item">Комментарий
+                          <p class="reviews__item reviews__item--comment">Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по базовым характеристикам. Не думал, что пересяду на китайский автопром, но сейчас гоняю и понимаю, что полностью доволен.</p>
+                        </li>
+                      </ul>
+                        <div class="reviews__raiting">
+                          <div class="reviews__wraper">
+                            <div class="reviews__star">
+                              <svg width="16" height="17">
+                                  <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                              </svg>
+                              <svg width="16" height="17">
+                                <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                              </svg>
+                              <svg width="16" height="17">
+                                <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                              </svg>
+                              <svg width="16" height="17">
+                                <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                              </svg>
+                              <svg width="16" height="17">
+                                <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                              </svg>
+                            </div>
+                            <div class="reviews__star reviews__star--fill">
+                              <svg width="16" height="17">
+                                  <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                              </svg>
+                              <svg width="16" height="17">
+                                <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                              </svg>
+                              <svg width="16" height="17">
+                                <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                              </svg>
+                              <svg width="16" height="17">
+                                <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                              </svg>
+                              <svg width="16" height="17">
+                                <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <span>Советуют</span>
+                        </div>
+                      <div class="reviews__time">
+                        <p>1 минуту назад</p>
+                        <span>Ответить</span>
+                    </div>
+                  </div>
+                  <div class="reviews__review">
+                    <h2 class="reviews__avtor">Марсель Исмагилов</h2>
+                      <ul class="reviews__list">
+                        <li class="reviews__item"><span>+</span>Достоинства
+                          <p class="reviews__item reviews__item--dignity">Cтиль, комфорт, управляемость</p>
+                        </li>
+                        <li class="reviews__item"><span>-</span>Недостатки
+                          <p class="reviews__item reviews__item--disadvantage"> Дорогой ремонт и обслуживание</p>
+                        </li>
+                        <li class="reviews__item">Комментарий
+                          <p class="reviews__item reviews__item--comment">Дизайн отличный, управление просто шикарно, ощущения за рулём такой машины особые. Но ремонт очень дорогой. Пару месяцев назад пришлось менять двигатель. По стоимости вышло как новый автомобиль. Так что, если покупать эту машину, надо быть готовым к большим расходам на обслуживание.</p>
+                        </li>
+                      </ul>
+                      <div class="reviews__raiting">
+                        <div class="reviews__wraper">
+                          <div class="reviews__star">
+                            <svg width="16" height="17">
+                                <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                            </svg>
+                            <svg width="16" height="17">
+                              <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                            </svg>
+                            <svg width="16" height="17">
+                              <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                            </svg>
+                            <svg width="16" height="17">
+                              <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                            </svg>
+                            <svg width="16" height="17">
+                              <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                            </svg>
+                          </div>
+                          <div class="reviews__star reviews__star--fill">
+                            <svg width="16" height="17">
+                                <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                            </svg>
+                            <svg width="16" height="17">
+                              <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                            </svg>
+                            <svg width="16" height="17">
+                              <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                            </svg>
+                            <svg width="16" height="17">
+                              <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                            </svg>
+                            <svg width="16" height="17">
+                              <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <span>Советуют</span>
+                      </div>
+                      <div class="reviews__time">
+                        <p>1 минуту назад</p>
+                        <span>Ответить</span>
+                    </div>
+                  </div>
+                <button class="reviews__button" type="button">Оставить отзыв</button>
+              </div>
+            </div>
+            </li>
+            <li class="tabs__content-item">
+              <div class="tabs__content-contacts contacts">
+                <address class="contacts__adress">
+                  <dl>
+                    <dt>Адрес</dt>
+                    <dd>Санкт-Петербург, набережная реки Карповки, дом 5</dd>
+                    <dt>Режим работы</dt>
+                    <dd>Ежедневно, с 10:00 до 21:00</dd>
+                    <dt>Телефон</dt>
+                    <dd><a href="tel:88003335599">8 (800) 333-55-99</a></dd>
+                    <dt>E-mail</dt>
+                    <dd><a href="mailto:info@avto-moto.ru">info@avto-moto.ru</a></dd>
+                  </dl>
+                </address>
+                <div class="contacts__adress-map">
+                  <div class="contacts__adress-map-yandex" id="map"></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="container page-footer__container">
+      <div class="page-footer__menu">
+        <ul class="page-footer__menu-list">
+          <li class="page-footer__menu-item page-footer__menu-item--first">
+            <a href="#">Корпоративным клиентам</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#">Клиентам</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#">Аренда авто</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#">Каршеринг</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#">Как продать авто</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#">Traid-in</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#">Test draiv</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <section class="pop-up">
+    <div class="pop-up__container">
+      <button type="button" class="pop-up__close">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <h2 class="pop-up__title">Оставить отзыв</h2>
+      <form class="pop-up__form form" id="reviews-form" action="index.html" method="GET" enctype="multipart/form-data">
+        <div class="form__group">
+          <label class="form__label form__label--required" data-required="true"><span class="form__error">Пожалуйста, заполните поле</span><input type="text" id="name" name="name" placeholder="Имя"></label>
+          <label class="form__label"><input type="text" id="advantages" name="advantages" placeholder="Достоинства"></label>
+          <label class="form__label"><input type="text" id="disadvantage" name="disadvantages" placeholder="Недостатки"></label>
+        </div>
+        <div class="form__group">
+          <div class="form__iner">
+            <p>Оцените товар:</p>
+            <div class="form__wraper">
+              <input type="text" class="visually-hidden" name="raiting-value" id="raiting" value="0">
+                  <div class="form__star" data-raiting-control="">
+                    <svg width="27" height="27">
+                        <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                    </svg>
+                    <svg width="27" height="27">
+                      <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                    </svg>
+                    <svg width="27" height="27">
+                      <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                    </svg>
+                    <svg width="27" height="27">
+                      <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                    </svg>
+                    <svg width="27" height="27">
+                      <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                    </svg>
+                  </div>
+                  <div class="form__star form__star--fill" data-raiting-fill="">
+                    <svg width="27" height="27">
+                        <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                    </svg>
+                    <svg width="27" height="27">
+                      <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                    </svg>
+                    <svg width="27" height="27">
+                      <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                    </svg>
+                    <svg width="27" height="27">
+                      <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                    </svg>
+                    <svg width="27" height="27">
+                      <use xlink:href="img/sprite_auto.svg#icon-star"></use>
+                    </svg>
+                  </div>
+            </div>
+          </div>
+        <label class="form__label form__label--required" data-required="true"><span class="form__error">Пожалуйста, заполните поле</span><textarea placeholder="Комментарий" id="comment" name="comment"></textarea></label>
+        </div>
+        <p class="form__button"><button type="submit">Оставить отзыв</button></p>
+      </form>
+    </div>
+  </section>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ba3e8120-b779-499f-8aac-7caf36983d11&lang=ru_RU"></script>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
